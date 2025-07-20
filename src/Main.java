@@ -89,5 +89,19 @@ public class Main {
         }
         //display min and max
         System.out.printf("\nThe minimum of the array is %d. The maximum of the array is %d.\n", min, max);
+
+        System.out.println("\nAverage of dataPoints is: " + getAverage(dataPoints));
+
+    }
+
+    public static double getAverage(int values[])
+    {
+        int sum = 0;
+        int length = values.length;
+        for (int i = 0; i < length; i++) {
+            sum = sum + values[i];
+        }
+        double  ave = (double) sum / length;
+        return ave;
     }
 }
