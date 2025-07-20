@@ -56,5 +56,20 @@ public class Main {
             System.out.printf("I found %d %d times in the array.\n", userSelect, foundCount);
         }
 
+        //Task 7 short circuit search for a new value
+        int scSelect = SafeInput.getRangedInt(in,"\nChoose a second value", 1, 100);
+        System.out.printf("Short ciruit searching for %d.\n", scSelect);
+        foundCount = 0;
+        for (int i = 0; i < DATA_SIZE; i++) {
+            if (dataPoints[i] == scSelect){
+                foundCount++;
+                System.out.printf("I found %d at position %d.\n", scSelect, i);
+                break;
+            }
+        }
+        if (foundCount == 0){
+            System.out.printf("I did not find %d in the array.\n", userSelect);
+        }
+
     }
 }
