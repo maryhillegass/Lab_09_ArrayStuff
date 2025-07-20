@@ -71,5 +71,23 @@ public class Main {
             System.out.printf("I did not find %d in the array.\n", userSelect);
         }
 
+
+        //Task 8 Min and Max
+        //initialize and make the first value the min and max
+        int min = dataPoints[0];
+        int max = dataPoints[0];
+
+        //loop through, check each value if it is larger than max, redfine max, if it is less than min, redefine min
+        for (int i = 0; i < DATA_SIZE; i++) {
+            // less than min
+            if (dataPoints[i] < min)
+                min = dataPoints[i];
+
+            //more than max
+            if (dataPoints[i] > max)
+                max = dataPoints[i];
+        }
+        //display min and max
+        System.out.printf("\nThe minimum of the array is %d. The maximum of the array is %d.\n", min, max);
     }
 }
